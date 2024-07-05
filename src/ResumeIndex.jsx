@@ -10,7 +10,7 @@ export function ResumeIndex(props) {
             <img src={resume.image} width="300" height="300"/>
             <h2>Job Title:{resume.jobTitle}</h2>
             <h2>Yrs Of Experience:{resume.experience}</h2>
-            <h2>Skills: {resume.skill}</h2>
+            <h2>Skills: {resume.Skills}</h2>
             <button onClick={() => props.onShowResume(resume)}>More info</button>
             <hr />
         </div>
