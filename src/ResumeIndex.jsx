@@ -1,4 +1,5 @@
 export function ResumeIndex(props) {
+  console.log(props.resumes[0].skill[0])
   return (
     <div>
       <h1>All Resumes</h1>
