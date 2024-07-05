@@ -26,23 +26,23 @@ export function ResumeIndex(props) {
 
   return (
     <div>
-      <h1>All Resumes</h1>
 
       {props.resumes.map((resume) => (
         <div key={resume.id}>
+            <img src={resume.image} width="300" height="300"/>
            <h2>First Name: {resume.first_name}</h2>
             <h2>Last Name:{resume.last_name}</h2>
-            <img src={resume.image} width="300" height="300"/>
+            <h2>Skill: {resume.Skills} </h2>
+
             <h2>Resume Url: {resume.resume_url} </h2>
             <h2>Latest Job Title: {resume.experiences[(resume.experiences.length)-1].job_title} </h2>
               {resume.experiences.map((exp) => (
               <h2> Exp(in months): {calculateDifference(exp.start_date, exp.end_date)} months</h2>
               ))}
-              
+         
 
-            {/* <h2>Yrs Of Experience:{resume.experience}</h2>
+            <button onClick={() => props.onShowResume(resume)}>More info</button>
 
-            <h2>Skills: {resume.skill}</h2> */}
             <hr />
         </div>
         ))
@@ -50,3 +50,4 @@ export function ResumeIndex(props) {
     </div>
   );
 }
+
