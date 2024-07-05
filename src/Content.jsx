@@ -16,9 +16,11 @@ export function Content() {
 
   const handleShowResume = (resume) => {
     console.log("handleShowResume", resume);
+    axios.get("http://localhost:3000/students.json").then((response) => {
     setIsResumesShowVisible(true);
     setCurrentResume(resume);
-  };
+  });
+};
 
   const handleClose = () => {
     console.log("handleClose");
